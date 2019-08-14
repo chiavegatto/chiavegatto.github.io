@@ -1,0 +1,95 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    font-family: Verdana,Tahoma,sans-serif;
+    font-size: 15px;
+    //background-color: rgb(69, 140, 255);
+    max-width: 900px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+}
+
+input, textarea{
+    width: 800px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+}
+
+.inline{
+    width: 15px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+}
+
+select{
+    width: 820px;
+    height: 36px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus, select:focus, option:focus {
+    border-color: #000066;
+    box-shadow: 5px 0px 9px #1e50ff;
+    background-color: #faff94;
+    color: black;
+    font-weight: bold;
+}
+
+.add input {
+    background-color: #5cb85c;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: white;
+    font-size: 16px;
+}
+
+.clear {
+    background-color: gray;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: white;
+    font-size: 16px;
+}
+
+textarea {
+    width: 800px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 800px;
+}
+
+form label {
+    margin-left: 20px;
+    color: #000000;
+    font-weight: bold;
+}
