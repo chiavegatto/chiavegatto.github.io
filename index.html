@@ -2,86 +2,88 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Cadastro de pessoa</title>
-    <meta charset="utf-8" />
-    <link href="ContatoEstilo.css" rel="stylesheet" media="all" />
+    <meta charset="utf-8"/>
+    <link href="ContatoEstilo.css" rel="stylesheet" media="all"/>
     <script src="JavaScript1.js"></script>
 </head>
 <body>
-    <form name="meu_form" >
+<form name="meu_form" >
+    title="This field should not be left blank."
 
-        <h1>Cadastro de usuário</h1>
+    <h1>Cadastro de usuário</h1>
 
-        <p class="nome">
-            <label for="nome">Nome</label>
-            <input type="text" id="nomeid" placeholder="Fulano da Silva" name="nome" required/>
-        </p>
-        <p class="fone">
-            <label for="fone">Fone</label>
-            <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
-        </p>
-        <p>
-            <label for="email">Email</label>
-            <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
-        </p>
-        <p>
-            <label for="cidade">Cidade</label>
-            <select name="cidade" id="cidadeid">
-                <option value="Manaus">Manaus</option>
-                <option value="Borba">Borba</option>
-                <option value="Labrea">Labrea</option>
-                <option value="Manaquiri">Manaquiri</option>
-            </select>
-        </p>
-        <p>
-            <label for="datanascimento"> Data Nascimento</label>
-            <input id="datanascimentoid" name="datanascimento" type="date"/>
-        </p>
-        <p>
-            <label for="sexo">Sexo</label><br>
-            <div>
-                <input class="inline" type="radio" name="radio" value="masculino" checked>Masculino</input>
-                <input class="inline" type="radio" name="radio" value="feminino">Feminino</input>
-                <input class="inline" type="radio" name="radio" value="outro">Outro</input>
-            </div>
-        </p>
-        <p>
-            <label for="interesse">Itens de interesse</label><br>
-            <div>
-                <input class="inline" type="checkbox" name="futebol">Futebol</input>
-                <input class="inline" type="checkbox" name="música">Música</input>
-                <input class="inline" type="checkbox" name="filmes">Filmes</input>
-            </div>
-        </p>
-        <p>
-            <textarea placeholder="Deixe sua opnião"></textarea>
-        </p>
-        <div align="center">
-            <table>
-                <tr>
-                    <td>
-                        <div>
-                            <p class="add">
-                                <input type="submit" id="enviarid" name="enviar" onclick="Enviar();" value="Cadastrar" />
-                            </p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>
-                                <button class="clear" id="limparid" name="limpar" onclick="Limpar()">Limpar</button>
-                            </p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>
-                                <a href="ContatoSucesso.html">Redirecionar</a>
-                            </p>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </form>
+    <p class="nome">
+        <label for="nome">Nome</label>
+        <input type="text" id="nomeid" placeholder="Fulano da Silva" name="nome" required oninvalid="this.setCustomValidity('Preencha o campo nome.')"
+               onchange="try{setCustomValidity('')}catch(e){}"/>
+    </p>
+    <p class="fone">
+        <label for="fone">Fone</label>
+        <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone"/>
+    </p>
+    <p>
+        <label for="email">Email</label>
+        <input type="email" id="emailid" placeholder="fulano@mail.com" name="email"/>
+    </p>
+    <p>
+        <label for="cidade">Cidade</label>
+        <select name="cidade" id="cidadeid">
+            <option value="Manaus">Manaus</option>
+            <option value="Borba">Borba</option>
+            <option value="Labrea">Labrea</option>
+            <option value="Manaquiri">Manaquiri</option>
+        </select>
+    </p>
+    <p>
+        <label for="datanascimento"> Data Nascimento</label>
+        <input id="datanascimentoid" name="datanascimento" type="date"/>
+    </p>
+    <p>
+        <label for="sexo">Sexo</label><br>
+    <div>
+        <input class="inline" type="radio" name="radio" value="masculino" checked>Masculino</input>
+        <input class="inline" type="radio" name="radio" value="feminino">Feminino</input>
+        <input class="inline" type="radio" name="radio" value="outro">Outro</input>
+    </div>
+    </p>
+    <p>
+        <label for="interesse">Itens de interesse</label><br>
+    <div>
+        <input class="inline" type="checkbox" name="input">Futebol</input>
+        <input class="inline" type="checkbox" name="input">Música</input>
+        <input class="inline" type="checkbox" name="input">Filmes</input>
+    </div>
+    </p>
+    <p>
+        <textarea placeholder="Deixe sua opnião"></textarea>
+    </p>
+    <div align="center">
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <p class="add">
+                            <input type="submit" id="enviarid" name="enviar" onclick="Enviar();" value="Cadastrar" />
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <p>
+                            <button class="clear" id="limparid" name="limpar" onclick="Limpar()">Limpar</button>
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <p>
+                            <a href="ContatoSucesso.html">Redirecionar</a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
 </body>
 </html>

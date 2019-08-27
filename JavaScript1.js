@@ -1,8 +1,10 @@
 function Enviar() {
 
     var nome = document.getElementById("nomeid");
+    var mensagem = document.getElementById("msg");
 
     if (nome.value != "") {
+        mensagem = 'Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso';
         alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
     }
 
