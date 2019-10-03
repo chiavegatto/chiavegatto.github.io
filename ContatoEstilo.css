@@ -17,7 +17,7 @@ h1 {
 }
 
 input, textarea{
-    width: 800px;
+    width: 855px;
     padding: 10px;
     color: black;
     margin-left: 20px;
@@ -37,7 +37,7 @@ input, textarea{
 }
 
 select{
-    width: 820px;
+    width: 875px;
     height: 36px;
     padding: 10px;
     color: black;
@@ -81,11 +81,24 @@ input:hover, textarea:hover, input:focus, textarea:focus, select:focus, option:f
     font-size: 16px;
 }
 
+.redirect {
+    background-color: #5352ff;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: white;
+    font-size: 16px;
+}
+
 textarea {
-    width: 800px;
+    width: 855px;
     height: 120px;
     line-height: 20px;
-    max-width: 800px;
+    max-width: 855px;
 }
 
 form label {
