@@ -16,7 +16,7 @@
 
     <style>
         #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-        #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+        #droppable { width: 200px; height: 250px; padding: 0.5em; float: left; margin: 10px; }
         .ui-draggable, .ui-droppable {
             background-position: top;
         }
@@ -40,13 +40,16 @@
 <body>
 
 <h1>Drag and Drop curso Selenium Básico</h1>
+<h3>Arraste o bug para o alvo.</h3>
 
 <div id="draggable" class="ui-widget-content">
-    <p>Arraste-me para o meu alvo</p>
+<!--    <p>Arraste-me para o meu alvo</p>-->
+    <img src="bug.jpeg" draggable="true" ondragstart="drag(event)" width="100" height="100">
 </div>
 
 <div id="droppable" class="ui-widget-header">
-    <p id="result">Solta aqui</p>
+    <p id="result">Arraste até aqui.</p>
+    <img src="alvo.png" draggable="true" ondragstart="drag(event)" width="200" height="200">
 </div>
 
 </body>
