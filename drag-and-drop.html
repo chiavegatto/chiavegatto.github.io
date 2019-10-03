@@ -1,52 +1,53 @@
-<!DOCTYPE HTML>
-<html>
-<meta charset="utf-8"/>
+
+<!doctype html>
+<html lang="pt">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drag and Drop example - CrossBrowserTesting.com</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+
     <style>
-        #div1, #div2 {
-            float: left;
-            width: 100px;
-            height: 35px;
-            width: 350px;
-            height: 250px;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid black;
+        #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+        #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+        .ui-draggable, .ui-droppable {
+            background-position: top;
         }
     </style>
+
+
     <script>
-        function allowDrop(ev) {
-            ev.preventDefault();
-        }
-
-        function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-            document.getElementById("demo").innerHTML = "O elemento p está sendo arrastado.";
-        }
-
-        function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-            document.getElementById("demo").innerHTML = "O elemento foi arrastado.";
-        }
+        $( function() {
+            $( "#draggable" ).draggable();
+            $( "#droppable" ).droppable({
+                drop: function( event, ui ) {
+                    $( this )
+                        .addClass( "ui-state-highlight" )
+                        .find( "p" )
+                        .html( "Arrastado!" );
+                }
+            });
+        } );
     </script>
 </head>
 <body>
 
-<h2>Drag and Drop</h2>
-<p>Drag the image back and forth between the two div elements.</p>
-<p>Arraste a imagem de uma caixa para a outra.</p>
+<h1>Drag and Drop curso Selenium Básico</h1>
 
-
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="bug.jpeg" draggable="true" ondragstart="drag(event)" id="drag1" width="350" height="250">
+<div id="draggable" class="ui-widget-content">
+    <p>Arraste-me para o meu alvo</p>
 </div>
 
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-<p id="demo"></p>
+<div id="droppable" class="ui-widget-header">
+    <p>Solta aqui</p>
+</div>
 
 </body>
 </html>
-
