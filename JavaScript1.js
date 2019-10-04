@@ -10,6 +10,18 @@ function Enviar() {
 
 }
 
+function Submit() {
+
+    var nome = document.getElementById("opiniao");
+    var mensagem = document.getElementById("msg");
+
+    if (nome.value != "") {
+        mensagem = 'Obrigado! Sua opinião foi enviada com sucesso';
+        alert('Obrigado! Sua opinião foi enviada com sucesso');
+    }
+
+}
+
 function Limpar() {
   document.getElementById('meu_form').reset();
 }
